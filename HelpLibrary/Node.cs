@@ -5,13 +5,13 @@ namespace HelpLibrary
 {
     public class Node
     {
-        private int value { get; set; }
-        private bool visited { get; set; }
-        internal List<Node> pointingTo;
+        public int LDvalue { get; set; }
+        public bool visited { get; set; }
+        public List<Node> pointingTo;
      
         public Node(int value)
         {
-            this.value = value;
+            this.LDvalue = value;
         }//end constructor
 
     }// end class

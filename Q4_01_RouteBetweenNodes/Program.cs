@@ -10,13 +10,13 @@ namespace Q4_01_RouteBetweenNodes
         {
             //LD node creation
             
-            Node Node1 = new Node(1);
-            Node Node2 = new Node(2);
-            Node Node3 = new Node(3);
-            Node Node4 = new Node(4);
-            Node Node5 = new Node(5);
-            Node Node6 = new Node(6);
-            Node Node7 = new Node(7);
+            Node Node1 = new Node(1); Node1.LDvalue = 1; 
+            Node Node2 = new Node(2); Node2.LDvalue = 2;
+            Node Node3 = new Node(3); Node3.LDvalue = 3;
+            Node Node4 = new Node(4); Node4.LDvalue = 4;
+            Node Node5 = new Node(5); Node5.LDvalue = 5;
+            Node Node6 = new Node(6); Node6.LDvalue = 6;
+            Node Node7 = new Node(7); Node7.LDvalue = 7;
 
             //LD Graph creation
             Graph Graph1 = new Graph();
@@ -30,6 +30,13 @@ namespace Q4_01_RouteBetweenNodes
             Graph1.nodePointTo(Node3, new List<Node>() {Node6});
             Graph1.nodePointTo(Node5, new List<Node>() {Node4});
             Graph1.nodePointTo(Node6, new List<Node>() {Node4,Node7});
+
+            //LD TESTS ------------------
+            int result;
+            result = Implementation.search(Graph1, Node2, Node7); //expected "-1", the nodes are not connected.
+            result = Implementation.search(Graph1, Node1, Node4); //expected "2", the nodes are connected by two steps
+
+
 
         }//end main
     }
