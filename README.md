@@ -8,11 +8,11 @@ It's an implemetation of a BFS(Breadth First Search), the problem can be solved 
 
 LOGIC:
 
-mark all nodes as not visited
-enqueue root node and mark as visited
-  while queue is not empty
-    dequeue last node + visit 
-    foreach qequeued adjacent 
-      if not already visited -> mark as visited + enqueue    
+- mark all nodes as not visited
+- enqueue root node and mark as visited
+  - while queue is not empty
+    - dequeue last node + visit 
+    - foreach qequeued adjacent 
+      - if not already visited -> mark as visited + enqueue    
 
 **implemented in "//LD Q4_01_RouteBetweenNodes"**
