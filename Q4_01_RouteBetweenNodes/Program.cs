@@ -32,7 +32,7 @@ namespace Q4_01_RouteBetweenNodes
             Graph1.nodePointTo(Node6, new List<Node>() {Node4,Node7});
 
             //LD TESTS ------------------
-            int result;
+            bool result;
             result = Implementation.search(Graph1, Node2, Node7); //expected "-1", the nodes are not connected.
             result = Implementation.search(Graph1, Node1, Node4); //expected "2", the nodes are connected by two steps
 

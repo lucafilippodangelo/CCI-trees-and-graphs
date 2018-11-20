@@ -7,8 +7,14 @@ namespace HelpLibrary
     {
         public int LDvalue { get; set; }
         public bool visited { get; set; }
-        public List<Node> pointingTo;
-     
+
+        //property useful for directed graphs
+        public List<Node> pointingTo; 
+
+        //property useful for balanced trees
+        public Node leftPointingNode { get; set; }
+        public Node rightPointingNode { get; set; }
+
         public Node(int value)
         {
             this.LDvalue = value;

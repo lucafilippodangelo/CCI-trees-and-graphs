@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelpLibrary;
+using System;
 
 namespace Q4_02_MinimalTree
 {
@@ -6,7 +7,15 @@ namespace Q4_02_MinimalTree
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Graph Graph1 = new Graph();
+
+            //LD test odd array
+            int[] orderedSeq = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+            Implementation.createMinimalBinarySearchTreeEntry(orderedSeq, Graph1);
+
+            //LD test pair array
+            int[] orderedSeqTwo = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            Implementation.createMinimalBinarySearchTreeEntry(orderedSeqTwo, Graph1);
         }
     }
 }
