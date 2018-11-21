@@ -7,15 +7,15 @@ namespace Q4_02_MinimalTree
     {
         static void Main(string[] args)
         {
-            Graph Graph1 = new Graph();
+            //LD the root node will be returned, it's enough debug on the returned node and dig on left and right pointed nodes
 
             //LD test odd array
             int[] orderedSeq = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9};
-            Implementation.createMinimalBinarySearchTreeEntry(orderedSeq, Graph1);
+            Node aNode = Implementation.createMinimalBinarySearchTreeEntry(orderedSeq);
 
             //LD test pair array
             int[] orderedSeqTwo = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            Implementation.createMinimalBinarySearchTreeEntry(orderedSeqTwo, Graph1);
+            Node aNode2 = Implementation.createMinimalBinarySearchTreeEntry(orderedSeqTwo);
         }
     }
 }

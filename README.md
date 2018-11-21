@@ -23,8 +23,9 @@ Given a sorted array(increasing order) with unique integer elements, write an al
 
 APPROACH:
 
-The idea is to consider each subsection of the array per time:
-1) insert in the tree the middle element of the array
-2) insert into the left of the subtree the left part of the array
-3) insert into the right of the subtree the right part of the array
-4) recurse
+The idea is to consider each subsection of the array per time, below the logic implemented:
+1) at each recursive call insert in the tree as a new node the middle element of the array
+   continue if startIndex>endIndex
+2) create a recursive call passing the left part of the array
+3) create a recursive call passing the right part of the array
+4) at each recursive call return the created node when all the recursive calls for the subtrees reach the exit condition

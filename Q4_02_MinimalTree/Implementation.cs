@@ -6,33 +6,28 @@ namespace Q4_02_MinimalTree
     {
 
 
-        public static void createMinimalBinarySearchTreeEntry(int[] orderedSeq, Graph Graph1)
+        public static Node createMinimalBinarySearchTreeEntry(int[] orderedSeq)
         {
             //LD for each sequence consider from index 0 to lenght-1
             int startIndex = 0;
             int endIndex = orderedSeq.Length - 1;
 
-            
-            Node aa = createMinimalBinarySearchTreeRecursive(orderedSeq, startIndex, endIndex);
-
-            Graph1.Nodes.Add(aa);
-
-
-
+            return createMinimalBinarySearchTreeRecursive(orderedSeq, startIndex, endIndex);
         }
 
         /// <summary>
         /// The idea is to consider each subsection of the array per time:
-        /// 1) insert in the tree the middle element of the array
-        /// 2) insert into the left of the subtree the left part of the array
-        /// 3) insert into the right of the subtree the right part of the array
-        /// 4) recurse
+        /// 1) at each recursive call insert in the tree as a new node the middle element of the array
+        ///    continue if startIndex>endIndex
+        /// 2) create a recursive call passing the left part of the array
+        /// 3) create a recursive call passing the right part of the array
+        /// 4) at each recursive call return the created node when all the recursive calls for the subtrees reach the exit condition
         /// </summary>
         /// <param name="orderedSeq"></param>
         public static Node createMinimalBinarySearchTreeRecursive(int[] orderedSeq, int startIndex, int endIndex)
         {
             //LD recursion exit condition
-            if (endIndex < startIndex)
+            if ( startIndex > endIndex )
                 return null;
 
             //LD for each sequence consider from index 0 to lenght-1
