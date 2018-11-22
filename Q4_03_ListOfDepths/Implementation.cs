@@ -11,9 +11,7 @@ namespace Q4_03_ListOfDepths
         public static List<LinkedList<Node>> listOfDepthsEntry(Node root)
         {
             List<LinkedList<Node>> listofLinkedList = new List<LinkedList<Node>>();
-
             listOfDepthsRecursive(root, listofLinkedList, 0);
-
             return listofLinkedList;
         }
 
