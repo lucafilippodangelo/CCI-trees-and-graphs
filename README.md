@@ -38,8 +38,9 @@ Given a binary tree, design an algorithm which creates a linked list for all the
 APPROACH:
 
 What I did was implementation of DFS, but in this case I don't visit all the adjacent, went for "Pre Order Traversal" -> visit current(root first time) then left recursively then right recursively.
-I did pass down to the recursive calls the level in order to store the element in the proper LinkedList.
+I did pass down to the recursive calls the tree level( matching linked List index in my collection) in which to store the "current visiting node".
 
 **implemented in "//LD Q4_03_ListOfDepths"** The code is very well commented, did a couple of examples.
 
 ## 4.4 Check Balanced
+Implement a function to check if a binary tree is balanced. A tree is balanced when the height of the subtrees never differ by more than one.

@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelpLibrary", "HelpLibrary\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Q4_01_RouteBetweenNodes", "Q4_01_RouteBetweenNodes\Q4_01_RouteBetweenNodes.csproj", "{80B2ECFF-3901-402C-9FED-52942D238175}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q4_02_MinimalTree", "Q4_02_MinimalTree\Q4_02_MinimalTree.csproj", "{FDCF2E53-2342-41C6-8FC7-9B978B3A97F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Q4_02_MinimalTree", "Q4_02_MinimalTree\Q4_02_MinimalTree.csproj", "{FDCF2E53-2342-41C6-8FC7-9B978B3A97F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q4_03_ListOfDepths", "Q4_03_ListOfDepths\Q4_03_ListOfDepths.csproj", "{CAFC2EB1-1D4F-4B77-B9BB-BB385DF939FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Q4_03_ListOfDepths", "Q4_03_ListOfDepths\Q4_03_ListOfDepths.csproj", "{CAFC2EB1-1D4F-4B77-B9BB-BB385DF939FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q4_04_CheckBalanced", "Q4_04_CheckBalanced\Q4_04_CheckBalanced.csproj", "{0A3579CF-DDDD-43FC-B931-1FB661933958}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CAFC2EB1-1D4F-4B77-B9BB-BB385DF939FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAFC2EB1-1D4F-4B77-B9BB-BB385DF939FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAFC2EB1-1D4F-4B77-B9BB-BB385DF939FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3579CF-DDDD-43FC-B931-1FB661933958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3579CF-DDDD-43FC-B931-1FB661933958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3579CF-DDDD-43FC-B931-1FB661933958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3579CF-DDDD-43FC-B931-1FB661933958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
