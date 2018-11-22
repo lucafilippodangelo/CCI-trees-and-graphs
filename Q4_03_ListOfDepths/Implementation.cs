@@ -7,17 +7,17 @@ namespace Q4_03_ListOfDepths
 {
     class Implementation
     {
-        //LD Entry method, this will return the list of linked list with inside the nodes of the tree organized by level
+        //LD Entry method, will return a list of "LinkedList<Node>", where each linked List cointain nodes for one of the tree levels.
         public static List<LinkedList<Node>> listOfDepthsEntry(Node root)
         {
-            List<LinkedList<Node>> lists = new List<LinkedList<Node>>();
+            List<LinkedList<Node>> listofLinkedList = new List<LinkedList<Node>>();
 
-            listOfDepthsRecursive(root, lists, 0);
+            listOfDepthsRecursive(root, listofLinkedList, 0);
 
-            return lists;
+            return listofLinkedList;
         }
 
-        public static void listOfDepthsRecursive(Node aNode, List<LinkedList<Node>> lists, int currentLevel)
+        public static void listOfDepthsRecursive(Node aNode, List<LinkedList<Node>> listofLinkedList, int currentLevel)
         {
             // implementation of DFS, but in this case I don't visit all the adjacent but will go for "Pre Order Traversal" -> visit current(root first time) then left recursively then right recursively
             if (aNode == null) //LD this check is just for the root
@@ -27,12 +27,12 @@ namespace Q4_03_ListOfDepths
             aNode.visited = true;
 
             //LD add the node in a linked list
-            addNodeToLinkedList(aNode, lists, currentLevel);
+            addNodeToLinkedList(aNode, listofLinkedList, currentLevel);
 
             if (aNode.leftPointingNode != null && aNode.leftPointingNode.visited == false)
-                listOfDepthsRecursive(aNode.leftPointingNode, lists, currentLevel + 1);
+                listOfDepthsRecursive(aNode.leftPointingNode, listofLinkedList, currentLevel + 1);
             if (aNode.rightPointingNode != null && aNode.rightPointingNode.visited == false)
-                listOfDepthsRecursive(aNode.rightPointingNode , lists, currentLevel + 1);
+                listOfDepthsRecursive(aNode.rightPointingNode , listofLinkedList, currentLevel + 1);
 
         }
 
