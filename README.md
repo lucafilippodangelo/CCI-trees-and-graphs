@@ -37,16 +37,9 @@ Given a binary tree, design an algorithm which creates a linked list for all the
 
 APPROACH:
 
-Here the idea is to solve the problem with a DFS(Deep First Search), a kind of preorder traversal, where the root is the first visited. I need to pass down to the recursive calls the level in order to store the element in the proper queue.
+What I did was implementation of DFS, but in this case I don't visit all the adjacent, went for "Pre Order Traversal" -> visit current(root first time) then left recursively then right recursively.
+I did pass down to the recursive calls the level in order to store the element in the proper LinkedList.
 
-Help Methods Needed that I will not create because out of the scope:
-- method to create a list for each depth level of the three(check inside if the specific list exist already before to create)
-- method to chech the dept of the tree
+**implemented in "//LD Q4_03_ListOfDepths"** The code is very well commented, did a couple of examples.
 
-
-- method to add the input node in the specific list
-
-
-- method to create the tree receiving in input the root
-
-
+## 4.4 Check Balanced

@@ -20,7 +20,7 @@ namespace Q4_03_ListOfDepths
             Node Node6 = new Node(6); Node6.LDvalue = 6;
             Node Node7 = new Node(7); Node7.LDvalue = 7;
             Node Node8 = new Node(8); Node8.LDvalue = 8;
-            Node Node9 = new Node(9); Node7.LDvalue = 9;
+            Node Node9 = new Node(9); Node9.LDvalue = 9;
             Node Node10 = new Node(10); Node10.LDvalue = 10;
 
             //LD setup of the tree just by connecting the nodes
@@ -80,8 +80,9 @@ namespace Q4_03_ListOfDepths
 
             //LD TESTS ------------------
             List<LinkedList<Node>> result;
-            result = Implementation.listOfDepthsEntry(Node1); //expected +++++++++++
+            result = Implementation.listOfDepthsEntry(Node1); 
             result = Implementation.listOfDepthsEntry(Node1a); //expected +++++++++++
+
         }
     }
 }
