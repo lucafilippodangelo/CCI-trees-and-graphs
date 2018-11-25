@@ -86,9 +86,9 @@ namespace Q4_04_CheckBalanced
 
             //LD TESTS ------------------
             bool result;
-            result = Implementation.checkIfBalanced(Node1x); // not balanced (2 levels of difference)
-            result = Implementation.checkIfBalanced(Node1); // not balanced (2 levels of difference)
-            result = Implementation.checkIfBalanced(Node1a); //balanced (1 level of difference)
+            result = Implementation.checkIfBalancedEntry(Node1x); // expected: FALSE, not balanced (2 levels of difference)
+            result = Implementation.checkIfBalancedEntry(Node1); // expected: FALSE, not balanced (2 levels of difference)
+            result = Implementation.checkIfBalancedEntry(Node1a); // expected: TRUE, balanced (1 level of difference)
         }
     }
 }
