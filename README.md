@@ -52,3 +52,6 @@ APPROACH:
 - for each node, when I finish the left and right calls , we check(leftHeight - rightHeight)
   - if difference of absolute is > 1 then I "return", it's an exit condition because not leveled subtree found. 
     - else I return (max between left and right height) + 1
+
+
+[**implemented in "//LD Q4_04_CheckBalanced"**](https://github.com/lucafilippodangelo/CCI-trees-and-graphs/tree/master/Q4_04_CheckBalanced)
