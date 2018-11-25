@@ -44,3 +44,14 @@ I did pass down to the recursive calls the tree level( matching linked List inde
 
 ## 4.4 Check Balanced
 Implement a function to check if a binary tree is balanced. A tree is balanced when the height of the subtrees never differ by more than one.
+
+APPROACH:
+
+- It's a kind of DFS "Pre-Order Traversal", having in input the root, the algorithm goes down until the very bottom before for left and then for right.
+  - the exit condition from recursion is when in both left or right there are not firther nodes, in this case we return -1 as "height"
+- for each node, when we finish the left and right calls , we check (leftHeight - rightHeight) 
+  - if difference of absolute is > 1 then we "return", it's an exit condition. 
+    - else I return the (max between left and right height) + 1
+
+
+Starting from the root I recursevely checked the height of the left and right subtree.

@@ -9,6 +9,20 @@ namespace Q4_04_CheckBalanced
         {
             Console.WriteLine("Hello World!");
 
+            #region Creation of easiest tree to show the algorithm working. I can pass to the method the root "Node1x"
+
+            Node Node1x = new Node(1); Node1x.LDvalue = 1;
+            Node Node3x = new Node(3); Node3x.LDvalue = 3;
+            Node Node7x = new Node(7); Node7x.LDvalue = 7;
+
+
+            //LD setup of the tree just by connecting the nodes
+
+            Node1x.rightPointingNode = Node3x;
+            Node3x.rightPointingNode = Node7x;
+
+            #endregion
+
             #region Creation tree with four levels. I can pass to the method the root "Node1"
 
             Node Node1 = new Node(1); Node1.LDvalue = 1;
@@ -72,6 +86,7 @@ namespace Q4_04_CheckBalanced
 
             //LD TESTS ------------------
             bool result;
+            result = Implementation.checkIfBalanced(Node1x); // not balanced (2 levels of difference)
             result = Implementation.checkIfBalanced(Node1); // not balanced (2 levels of difference)
             result = Implementation.checkIfBalanced(Node1a); //balanced (1 level of difference)
         }
