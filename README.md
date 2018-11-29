@@ -55,4 +55,10 @@ APPROACH:
 
 [**implemented in "//LD Q4_04_CheckBalanced"**](https://github.com/lucafilippodangelo/CCI-trees-and-graphs/tree/master/Q4_04_CheckBalanced)
 
-## 4.4 Validate BST
+## 4.5 Validate BST
+Check if the input tree is a BST, Binary Search Tree
+
+APPROACH:
+
+- OPTION 1 -> do a In-Order DFS, copy all the content of the tree in an array and then check if the array is ordered. An improvement could be to don't use the array, keep in a static variable the last visited node in order to compare it with the current.
+- OPTION 2 -> I went for a DFS implementation. An in-order search respecting in all the tree was "left <= current < right"
