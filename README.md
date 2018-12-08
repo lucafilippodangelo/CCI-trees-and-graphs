@@ -58,6 +58,13 @@ APPROACH:
 ## 4.5 Validate BST
 Check if the input tree is a BST, Binary Search Tree
 
-APPROACH: got a recursive approach, code commented.
+APPROACH: got a recursive approach, Pre-Order Traversal. Code commented.
 
 [**implemented in "//LD Q4_05_ValidateBST"**](https://github.com/lucafilippodangelo/CCI-trees-and-graphs/tree/master/Q4_05_ValidateBST)
+
+## 4.6 Successor
+Find successor of each node in having in input a BST. 
+
+APPROACH: I did solve the problem by implementing an "in-order" traversal.
+
+[**implemented in "//LD Q4_06_Successor"**](https://github.com/lucafilippodangelo/CCI-trees-and-graphs/tree/master/Q4_06_Successor)
