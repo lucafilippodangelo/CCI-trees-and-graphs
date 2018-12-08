@@ -7,48 +7,48 @@ namespace Q4_05_ValidateBST
 {
     class Implementation
     {
-        static int maxFromLeft;
-        static int maxFromRight;
-        static int currentFromLeft;
-        static int currentFromRight;
 
-        //LD this is a complex approach I got, not sure it is working
-        /*
-         
-        public static int checkBSTRecursive2(Node aNode)
+        public static bool isBSTEntry(Node root)
         {
-            //LD mark the node as visited
-            aNode.visited = true;
+            if (root == null)
+                return true;
 
-            if (aNode.leftPointingNode != null && aNode.leftPointingNode.visited == false)
-                maxFromLeft = checkBSTRecursive(aNode.leftPointingNode);
-
-            if (aNode.rightPointingNode != null && aNode.rightPointingNode.visited == false)
-                maxFromRight = checkBSTRecursive(aNode.rightPointingNode);
-
-            //LD CHECK if "left<=current<right" in case 
-
-            currentFromLeft = -1;
-            currentFromRight = -1;
-            if (aNode.leftPointingNode != null && !(aNode.LDvalue >= aNode.leftPointingNode.LDvalue) && !(aNode.LDvalue >= maxFromLeft)) 
-            {
-                //exit from function, the tree is not balanced  
-            }
-            else { currentFromLeft = aNode.leftPointingNode.LDvalue; }
-
-            if  (aNode.rightPointingNode != null && !(aNode.LDvalue < aNode.leftPointingNode.LDvalue) && !(aNode.LDvalue < maxFromRight))
-            {
-                //exit from function, the tree is not balanced
-            }
-            else { currentFromRight = aNode.rightPointingNode.LDvalue; }
-
-
-            return Math.Max(currentFromLeft, Math.Max(currentFromRight,aNode.LDvalue )); // at each call return: max between current, left and right
+            //LD starting from the very min value and max value as low and high boundaries
+            return isBSTRecursive(root, int.MinValue, int.MaxValue);
         }
 
-        */
+        /// <summary>
+        /// APPROACH
+        /// 1) visit current node, check that it's value is between boundaries
+        /// 2) if left node != null recursively check setting max="current node value". Return false if result of recursive call is != true
+        /// 3) if right node != null recursively check setting min="current node value". Return false if result of recursive call is != true
+        /// 
+        /// with this approach I ensure that current node is smaller or biggr than parent and that the all subtree is balanced
+        /// </summary>
+        /// <param name="aNode"></param>
+        /// <param name="low"></param>
+        /// <param name="high"></param>
+        /// <returns></returns>
+        public static bool isBSTRecursive(Node aNode, int low, int high)
+        {
+            //LD -> step 1
+            if (aNode.LDvalue <= low || aNode.LDvalue  >= high)
+                return false;
 
+            //LD -> step 2
+            if (aNode.leftPointingNode  != null && !isBSTRecursive(aNode.leftPointingNode , low, aNode.LDvalue  ))
+            {
+                return false;
+            }
 
+            //LD -> step 3
+            if (aNode.rightPointingNode  != null && !isBSTRecursive(aNode.rightPointingNode , aNode.LDvalue , high))
+            {
+                return false;
+            }
+
+            return true;
+        }
 
     }
 }
