@@ -7,6 +7,7 @@ namespace HelpLibrary
     {
         public int LDvalue { get; set; }
         public bool visited { get; set; }
+        public bool visiting { get; set; } //LD useful in exercise "Q4_07_BuildOrder"
 
         //property useful for directed graphs
         public List<Node> pointingTo; 

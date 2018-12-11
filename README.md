@@ -68,3 +68,13 @@ Find successor of each node in having in input a BST.
 APPROACH: I did solve the problem by implementing an "in-order" traversal.
 
 [**implemented in "//LD Q4_06_Successor"**](https://github.com/lucafilippodangelo/CCI-trees-and-graphs/tree/master/Q4_06_Successor)
+
+## 4.7 Build Order
+Having a list of processes and a list of dependencies(that is a list of couple of nodes [a,b] where process "a" must be executed before process "b"), write an algorithm to find build order will allow projects to be built.
+
+APPROACH:
+1) a possible approach is "topological sort", where
+   - (A) find all nodes with not incoming connections, queue in a LIFO in order to be processed in order
+   - (B) cut all the connections with other nodes 
+   - repeat (A) and (B). It's important to say that if loops in place the approach does not work. 
+2) - ww
