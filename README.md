@@ -72,9 +72,22 @@ APPROACH: I did solve the problem by implementing an "in-order" traversal.
 ## 4.7 Build Order
 Having a list of processes and a list of dependencies(that is a list of couple of nodes [a,b] where process "a" must be executed before process "b"), write an algorithm to find build order will allow projects to be built.
 
+EXAMPLE: 
+- input
+  - projects: a,b,c,d,e,f
+  - dependencies: (a,d), (f,b), (b,d), (f,a), (d,c)
+- output
+  - f,e,a,b,d,c
+
 APPROACH:
 1) a possible approach is "topological sort", where
-   - (A) find all nodes with not incoming connections, queue in a LIFO in order to be processed in order
+   - (A) find all nodes with no incoming connections, queue in a LIFO in order to be processed in order
    - (B) cut all the connections with other nodes 
    - repeat (A) and (B). It's important to say that if loops in place the approach does not work. 
-2) - ww
+2) a second possible approach to find the built path by avoiding cycles is by using DFS
+   - (A) pick an arbitrary node and perform DFS on it
+   - (B) go down and put the leafs, for instance "x" node with not outcome connection, in a FIFO list. They will be the last to be built. Cancel all the incoming connections to "x". Then when going back up from recursion include in the FIFO list the parent of "x".
+     - it's important to mark as "Visiting" all the nodes part of the current DFS and then mark the same as "Visited" when included in the FIFO list.
+   - repeat (A) and (B) until "not visited" nodes in place.
+   
+**Not implemented once trivial**

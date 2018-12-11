@@ -6,7 +6,7 @@ namespace Q4_07_BuildOrder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Not Implemented because trivial");
         }
     }
 }
