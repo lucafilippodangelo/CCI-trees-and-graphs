@@ -91,3 +91,27 @@ APPROACH:
    - repeat (A) and (B) until "not visited" nodes in place.
    
 **Not implemented once trivial**
+
+## 4.8 First Common Ancestor
+write logic to find First Common Ancestor for two nodes in a binary tree(not necessarely a binary search tree). Avoid storing additional nodes in data structure.
+
+In a binary tree was easy to determine in O(n) where the paths meets
+  - option one starting from root to nodes "x" and "y", store both paths in array and compare arrays to find match.
+  - option two check recursively starting from root if that stecific starting node is father of both. Check recursively in subnodes if not found.
+
+APPROACH:
+
+Once I don't have a binary tree
+  - (1) when the nodes have links to parent
+    - use same solution adopted in [**2.7 Intersection between two linked lists"**](https://github.com/lucafilippodangelo/CCI-linked-lists) but without storing in linked lists. In this case I need to trace. This approach takes O(d) time, where "d" is the depth of the deepest node.
+	  - (a) by tracing the paths from "x" and "y" to the top
+	  - (b) get the difference in depth from leaf to root for both nodes
+	  - (c) then comparing starting from the bottom position index of the shorter path and comparing going in direction of the root. When they intersect there is a match. 
+  - (2) when nodes have not links to parent
+    - create a method to check if the input node is contained in any of the left or right subtrees
+	  - then starting from the root node check recursively if both nodes are on the same side(callling for each node the above method)
+	    - if yes continue recursively checking on the same side otherwhise go and check on the opposite side. 
+      - when will happen that the two sub nodes will not be on the same side, root will be returned as first common ancestor.
+
+RESOURCES:
+- https://github.com/careercup/CtCI-6th-Edition-CSharp/blob/master/Ch%2004.%20Trees/Q4_08_LowestCommonAncestorNotBST.cs
