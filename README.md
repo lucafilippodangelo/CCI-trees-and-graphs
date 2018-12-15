@@ -113,5 +113,7 @@ Once I don't have a binary tree
 	    - if yes continue recursively checking on the same side otherwhise go and check on the opposite side. 
       - when will happen that the two sub nodes will not be on the same side, root will be returned as first common ancestor.
 
+[**implemented in "//LD Q4_08_FirstCommonAncestor"**](https://github.com/lucafilippodangelo/CCI-trees-and-graphs/tree/master/Q4_08_FirstCommonAncestor)
+
 RESOURCES:
 - https://github.com/careercup/CtCI-6th-Edition-CSharp/blob/master/Ch%2004.%20Trees/Q4_08_LowestCommonAncestorNotBST.cs
