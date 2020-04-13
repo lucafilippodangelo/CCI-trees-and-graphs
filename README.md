@@ -117,3 +117,11 @@ Once I don't have a binary tree
 
 RESOURCES:
 - https://github.com/careercup/CtCI-6th-Edition-CSharp/blob/master/Ch%2004.%20Trees/Q4_08_LowestCommonAncestorNotBST.cs
+
+## 4.9 BST Sequences
+A BST was created by traversing through an array from left to right and inserting each element. Given a BST with distinct elements, print all possible arrays that could be led to this tree.
+
+INPUT
+2: 1,3 -> so the root "2" point left to "1" and right to "3"
+EXPECTED OUTPUT:
+[2,1,3], [2,3,1]

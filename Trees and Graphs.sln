@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelpLibrary", "HelpLibrary\HelpLibrary.csproj", "{9990E001-9969-4DDF-A96A-308149745C4F}"
 EndProject
@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Q4_06_Successor", "Q4_06_Su
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Q4_07_BuildOrder", "Q4_07_BuildOrder\Q4_07_BuildOrder.csproj", "{BBA19825-6F9B-4B3B-BD98-B3198DA03ED5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q4_08_FirstCommonAncestor", "Q4_08_FirstCommonAncestor\Q4_08_FirstCommonAncestor.csproj", "{7D28CA1C-3307-45A6-8037-086A3B0AE314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Q4_08_FirstCommonAncestor", "Q4_08_FirstCommonAncestor\Q4_08_FirstCommonAncestor.csproj", "{7D28CA1C-3307-45A6-8037-086A3B0AE314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestOfExercisesChapterFour", "RestOfExercisesChapterFour\RestOfExercisesChapterFour.csproj", "{A5E75A79-285F-4E89-8B84-3D98130332EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{7D28CA1C-3307-45A6-8037-086A3B0AE314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D28CA1C-3307-45A6-8037-086A3B0AE314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D28CA1C-3307-45A6-8037-086A3B0AE314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E75A79-285F-4E89-8B84-3D98130332EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E75A79-285F-4E89-8B84-3D98130332EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E75A79-285F-4E89-8B84-3D98130332EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E75A79-285F-4E89-8B84-3D98130332EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
